@@ -16,6 +16,7 @@ let backgroundOption = localStorage.getItem("background_option") || true;
 let backgroundInterval;
 
 function randomizeImgs() {
+  // alert(window.location.href.replace("index.html", ""));
   if (backgroundOption && backgroundOption !== "false") {
     document
       .querySelector(".random-background span.yes")
@@ -23,7 +24,7 @@ function randomizeImgs() {
     backgroundInterval = setInterval(() => {
       randomNumber = Math.floor(Math.random() * imgArray.length);
       landingPage.style.backgroundImage =
-        'url("../imgs/0' + randomNumber + '.jpg")';
+        'url("./imgs/0' + randomNumber + '.jpg")';
     }, 1000);
   } else {
     document
