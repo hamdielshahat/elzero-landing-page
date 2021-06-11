@@ -1,0 +1,446 @@
+:root {
+  --main-color: #ff9800;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  width: 1170px;
+  padding: 0 15px;
+  margin: auto;
+}
+
+/*  settings box  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ start*/
+.settings-box {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  min-height: 100vh;
+  transition: 0.3s;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 100;
+}
+.settings-box.open {
+  left: 0;
+}
+.settings-box .toggle-settings {
+  position: absolute;
+  top: 100px;
+  right: -30px;
+  color: #ccc;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+.settings-box .toggle-settings i {
+  padding: 8px 0;
+  width: 30px;
+}
+
+.settings-box .option-box {
+  background-color: #eee;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.settings-box .option-box h4 {
+  margin: 0;
+  color: #666;
+  font-size: 12px;
+}
+
+.settings-box .option-box .color-list {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.settings-box .option-box .color-list li {
+  display: inline-block;
+  padding: 10px;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  /* opacity: 0.5; */
+  cursor: pointer;
+  border: 3px solid transparent;
+}
+
+.settings-box .option-box .color-list li.active {
+  /* opacity: 1; */
+  border-color: #eee;
+}
+.settings-box .option-box .color-list li:first-child {
+  background-color: #ff9800;
+}
+.settings-box .option-box .color-list li:nth-child(2) {
+  background-color: #e91e63;
+}
+.settings-box .option-box .color-list li:nth-child(3) {
+  background-color: #009688;
+}
+.settings-box .option-box .color-list li:nth-child(4) {
+  background-color: #03a9f4;
+}
+.settings-box .option-box .color-list li:nth-child(5) {
+  background-color: #4caf50;
+}
+
+/* Random Background +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Start */
+.option-box .random-background span {
+  /* margin-top: 10px; */
+  display: inline-block;
+  width: 50px;
+  background: #009688;
+  color: #fff;
+  padding: 4px 10px;
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 4px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.option-box .random-background span.active {
+  opacity: 1;
+}
+
+/* Random Background +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ End */
+
+/*  settings box  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ End*/
+
+.landing-page {
+  min-height: 100vh;
+  background-image: url("../imgs/00.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.header-area {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  display: flex;
+  padding: 10px;
+}
+
+.header-area .logo {
+  width: 300px;
+  padding: 15px;
+  font-weight: bold;
+}
+
+.header-area .links {
+  list-style: none;
+  width: 100%;
+  text-align: right;
+  padding-left: 0;
+  padding-right: 20px;
+  font-size: 15px;
+}
+
+.header-area .links li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.header-area .links li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.header-area .links li a.active,
+.header-area .links li a:hover {
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+
+.introduction {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  width: 100%;
+}
+
+.introduction h1 {
+  font-size: 34px;
+  margin: 0 0 12px;
+}
+.introduction h1 span {
+  color: var(--main-color);
+}
+
+.introduction p {
+  line-height: 1.6;
+  font-size: 20px;
+}
+
+/* about us +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ start */
+.about-us {
+  padding: 50px 0;
+  /* width: 1170px; it makes flex:1; doesn't work*/
+  display: flex;
+}
+.about-us .info-box {
+  flex: 1;
+  padding: 30px;
+}
+.about-us .info-box h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--main-color);
+}
+.about-us .info-box p {
+  line-height: 1.8;
+  color: #767676;
+  margin: 0;
+}
+.about-us .img-box {
+  flex: 1;
+  text-align: center;
+}
+.about-us .img-box img {
+  width: 250px;
+}
+/* about us +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ End */
+
+/* Skills +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Start */
+.skills {
+  background: #eee;
+  /* color: var(--main-color); */
+  /* overflow: hidden; question: why Do I need it here to have margin effect on skill-box before I use position */
+  padding: 50px 0;
+}
+.skills h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--main-color);
+  margin: 0 0 50px;
+  text-align: center;
+  margin: 0 0 50px;
+}
+.skills .skill-box {
+  background: #fff;
+  display: flex;
+  padding: 15px;
+  margin: 20px;
+  /* margin-bottom: 20px; */
+  overflow: hidden;
+}
+.skills .skill-box .skill-name {
+  font-weight: bold;
+  width: 140px;
+  text-align: center;
+  line-height: 30px;
+}
+.skills .skill-box .skill-progress {
+  height: 30px;
+  width: 100%;
+  background-color: #f6f6f6;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+.skills .skill-box span {
+  /* display: inline-block; */
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: var(--main-color);
+  transition: all 0.5s;
+}
+
+/* Skills +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ End */
+
+/* Gallery +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Start */
+.gallery {
+  padding: 50px 0;
+}
+
+.gallery h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--main-color);
+  margin: 0 0 50px;
+  text-align: center;
+  margin: 0 0 50px;
+}
+
+.gallery .img-box {
+  text-align: center;
+}
+.gallery .img-box img {
+  width: 200px;
+  padding: 3px;
+  background-color: #f6f6f6;
+  border: 1px solid #ccc;
+  margin: 5px;
+  cursor: pointer;
+}
+
+/* Gallery +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ End */
+.gallery-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  z-index: 1001;
+}
+
+.popup-overlay img {
+  max-width: 100%;
+}
+
+.popup-overlay h3 {
+  text-align: center;
+  margin: 0 0 20px;
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+.close-btn {
+  position: absolute;
+  right: -5px;
+  top: -10px;
+  background-color: #ccc;
+  padding: 3px;
+  cursor: pointer;
+  font-weight: bold;
+}
+/* Timeline +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Start */
+.timeline {
+  padding: 30px 0;
+  background: #eee;
+  /* position: relative; */
+}
+.timeline .timeline-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline .timeline-content:before {
+  /* the vertical line */
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: var(--main-color);
+  top: 0;
+  left: 50%;
+  /* border: 1px solid var(--main-color); */
+  margin-left: -1px;
+}
+
+.timeline .timeline-content .year {
+  position: relative;
+  margin: 20px auto;
+  width: 50px;
+  background-color: var(--main-color);
+  /* left: calc(50% - 20px); */
+  /* top: -10px; */
+  z-index: 2;
+  text-align: center;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.timeline .left,
+.timeline .right {
+  width: calc(50% - 25px); /* -25 to make it away from the year box */
+  margin-bottom: 40px;
+  position: relative;
+  :both ;
+  position: relative;
+}
+.timeline .left {
+  float: left;
+}
+.timeline .left:before,
+.timeline .right:before {
+  /* the circule in the line */
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  border: 3px solid var(--main-color);
+  top: 20px;
+  right: -35px;
+  border-radius: 50%;
+}
+.timeline .right:before {
+  left: -35px;
+}
+
+.timeline .right {
+  float: right;
+}
+
+.timeline .content {
+  background-color: #fff;
+  padding: 20px;
+}
+.timeline .left .content:before,
+.timeline .right .content:before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 10px;
+  top: 20px; /* as .left and .right top */
+  height: 0;
+  width: 0;
+}
+.timeline .left .content:before {
+  border-color: transparent transparent transparent #fff;
+  right: -20px;
+}
+.timeline .right .content:before {
+  border-color: transparent #fff transparent transparent;
+  left: -20px;
+}
+
+.clear-fix {
+  clear: both;
+}
+
+/* Timeline +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ end */
