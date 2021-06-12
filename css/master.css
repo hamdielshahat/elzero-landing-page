@@ -442,5 +442,47 @@ body {
 .clear-fix {
   clear: both;
 }
+/* features Start */
+.features {
+  padding: 30px;
+  /* overflow: hidden; another way to fix float effect  */
+}
+.features h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--main-color);
+  text-align: center;
+  margin: 0 0 60px;
+}
+.features .feat-box {
+  width: calc(100% / 3);
+  float: left;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.features .feat-box h4 {
+  position: relative;
+  font-size: 22px;
+  margin: 15px 0 40px;
+}
 
+.features .feat-box h4:before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  bottom: -22px;
+  left: 50%;
+  margin-left: -20px; /* half width to make it center*/
+  background-color: var(--main-color);
+}
+.features .feat-box img {
+}
+.features .feat-box p {
+  width: 80%;
+  color: #706f6f;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+/* features End */
 /* Timeline +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ end */
