@@ -95,12 +95,34 @@ body {
 .settings-box .option-box .color-list li:nth-child(5) {
   background-color: #4caf50;
 }
+
+/* Random Background +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Start */
+.option-box span {
+  /* margin-top: 10px; */
+  display: inline-block;
+  width: 50px;
+  background: #009688;
+  color: #fff;
+  padding: 4px 10px;
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 4px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.option-box span.active {
+  opacity: 1;
+}
+
+/* Random Background +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ End */
+
 /* Settings box End */
 
 /* Nav bullets start ++++++++++++++++++++++++++++ */
 .nav-bullets {
   position: fixed;
-  z-index: 2;
+  z-index: 1000;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
@@ -116,39 +138,38 @@ body {
   cursor: pointer;
   position: relative;
 }
+.nav-bullets .bullet:hover .tooltip {
+  display: block;
+}
 
 .nav-bullets .bullet .tooltip {
   position: absolute;
-  right: 35px;
-  top: -5px;
   width: 100px;
-  padding: 3px 10px;
+  top: -8px;
+  right: 30px;
+  padding: 8px 10px;
   background-color: var(--main-color);
   color: #fff;
+  text-align: center;
+  cursor: default;
+  pointer-events: none; /* to prevent clicking */
+  display: none;
+}
+.nav-bullets .bullet .tooltip:before {
+  content: "";
+  position: absolute;
+  /* width: 15px; */
+  /* height: 15px; */
+  border-color: transparent transparent transparent var(--main-color);
+  border-width: 10px;
+  border-style: solid;
+  /* background-color: #555; */
+  top: 50%;
+  transform: translateY(-50%);
+  right: -20px;
 }
 
 /* Nav bullets End ++++++++++++++++++++++++++++ */
-
-/* Random Background +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Start */
-.option-box .random-background span {
-  /* margin-top: 10px; */
-  display: inline-block;
-  width: 50px;
-  background: #009688;
-  color: #fff;
-  padding: 4px 10px;
-  font-weight: bold;
-  font-size: 12px;
-  border-radius: 4px;
-  opacity: 0.5;
-  cursor: pointer;
-}
-
-.option-box .random-background span.active {
-  opacity: 1;
-}
-
-/* Random Background +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ End */
 
 /*  settings box  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ End*/
 

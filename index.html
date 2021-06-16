@@ -40,22 +40,29 @@
             <span class="no" data-background="no">No</span>
           </div>
         </div>
+        <div class="option-box">
+          <h4>Show Bullets</h4>
+          <div class="bullets-option">
+            <span class="yes active" data-display="yes">Yes</span>
+            <span class="no" data-display="no">No</span>
+          </div>
+        </div>
       </div>
     </div>
     <!-- end settings box -->
 
     <!-- Nav Bullets Start  -->
     <div class="nav-bullets">
-      <div class="bullet">
+      <div data-sec="about-us" class="bullet">
         <div class="tooltip">About Us</div>
       </div>
-      <div class="bullet">
+      <div data-sec="skills" class="bullet">
         <div class="tooltip">Our Skills</div>
       </div>
-      <div class="bullet">
+      <div data-sec="gallery" class="bullet">
         <div class="tooltip">Gallery</div>
       </div>
-      <div class="bullet">
+      <div data-sec="timeline" class="bullet">
         <div class="tooltip">Timeline</div>
       </div>
     </div>
@@ -68,10 +75,12 @@
         <div class="header-area">
           <div class="logo">Special Design</div>
           <ul class="links">
-            <li><a href="#" class="active">About</a></li>
-            <li><a href="#">Service</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#" data-sec="about-us" class="active">About</a></li>
+            <li><a href="#" data-sec="skills">Skills</a></li>
+            <li><a href="#" data-sec="gallery">Gallery</a></li>
+            <li><a href="#" data-sec="timeline">Timeline</a></li>
+            <li><a href="#" data-sec="features">Features</a></li>
+            <li><a href="#" data-sec="testemonials">Testimonials</a></li>
           </ul>
         </div>
       </div>
