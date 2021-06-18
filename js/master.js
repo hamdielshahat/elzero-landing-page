@@ -156,7 +156,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// Gallery Start
+// /////////////////////////////////////////////////////////////////////////////////////////// Gallery Start
 document.querySelectorAll(".img-box img").forEach((img) => {
   img.addEventListener("click", () => {
     /* Create overlay Element Start */
@@ -197,9 +197,9 @@ document.addEventListener("click", (e) => {
     document.querySelector(".gallery-overlay").remove();
   }
 });
-// Gallery End
+// ///////////////////////////////////////////////////////////////////////////////////////////////// Gallery End
 
-// Bullet Start
+// ///////////////////////////////////////////////////////////////////////////////////////////////// Bullet Start
 
 const allBullets = document.querySelectorAll(".bullet");
 // allBullets.forEach((bul) => {
@@ -214,9 +214,17 @@ const allLinks = document.querySelectorAll(".links a");
 
 goToSomeWhere(allBullets);
 goToSomeWhere(allLinks);
-// Bullet End
+// ///////////////////////////////////////////////////////////////////////////////////////////////// Bullet End
 
-// Utilities Start
+// ///////////////////////////////////////////////////////////////////////////////////////////////// Reset start
+document.querySelector(".reset-settings").addEventListener("click", () => {
+  // localStorage.removeItem('item-name');
+  localStorage.clear(); // to clear all local storage
+  document.location.reload();
+});
+// ///////////////////////////////////////////////////////////////////////////////////////////////// Reset End
+
+// /////////////////////////////////////////////////////////////////////////////////////////////////Utilities Start
 
 function goToSomeWhere(elements) {
   elements.forEach((ele) => {
@@ -241,8 +249,8 @@ const bulletLocalStorage = localStorage.getItem("bullet_option");
 const bulletContainer = document.querySelector(".nav-bullets");
 const bulletsSpan = document.querySelector(".bullets-option");
 
-bulletsSpan.querySelector("span.active").classList.remove("active");
 if (bulletLocalStorage !== null) {
+  bulletsSpan.querySelector("span.active").classList.remove("active");
   if (bulletLocalStorage === "yes") {
     document.querySelector(".bullets-option span.yes").classList.add("active");
     bulletContainer.style.display = "block";
