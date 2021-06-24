@@ -275,3 +275,28 @@ bulletsSpan.addEventListener("click", (e) => {
   }
 });
 // bullet End
+
+// Toggle menu
+const toggleMenuBtn = document.querySelector(".toggle-menu");
+const tLinks = document.querySelector(".links");
+
+toggleMenuBtn.addEventListener("click", function (e) {
+  // debugger;
+  e.stopPropagation();
+  // if (tLinks.classList.contains("open")) { // Wrong I did a mistake
+  this.classList.toggle("menu-active");
+  tLinks.classList.toggle("open");
+  // }
+});
+tLinks.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+document.addEventListener("click", (e) => {
+  // debugger;
+  // if (e.target != toggleMenuBtn && e.target != tLinks) {
+  if (tLinks.classList.contains("open")) {
+    toggleMenuBtn.classList.toggle("menu-active");
+    tLinks.classList.toggle("open");
+  }
+  // }
+});
