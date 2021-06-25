@@ -257,7 +257,10 @@ body {
   z-index: 2;
   width: 95%;
 }
-
+.introduction .hamdy-img {
+  width: 100px;
+  border-radius: 50%;
+}
 .introduction h1 {
   font-size: 34px;
   margin: 0 0 12px;
