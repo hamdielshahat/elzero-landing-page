@@ -578,6 +578,29 @@ body {
 .clear-fix {
   clear: both;
 }
+
+@media (max-width: 767px) {
+  .nav-bullets .bullet:hover .tooltip {
+    display: none;
+  }
+  .timeline .timeline-content .left,
+  .timeline .timeline-content .right {
+    width: calc(100% - 20px);
+    margin-bottom: 20px;
+  }
+  .timeline .left .content::before,
+  .timeline .right .content::before {
+    /* the side arrow */
+    display: none;
+  }
+
+  .timeline .left:before,
+  .timeline .right:before {
+    /* the circule in the line */
+    display: none;
+  }
+}
+
 /* features Start */
 .features {
   padding: 30px;
@@ -706,7 +729,7 @@ body {
     float: none;
     width: 100%;
     text-align: center;
-    margin: 10px;
+    margin: 10px auto;
   }
 }
 /* testemonials +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ end */
@@ -823,7 +846,7 @@ body {
 @media (max-width: 575px) {
   /* small devices => andscape phoens*/
   .container {
-    max-width: 95%;
+    max-width: 95vw;
   }
 }
 @media (min-width: 576px) {
